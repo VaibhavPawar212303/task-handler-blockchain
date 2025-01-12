@@ -1,0 +1,132 @@
+# Blockchain Application with Flask
+
+This project is a Flask-based blockchain application that includes functionalities for creating and managing groups, assigning tasks, approving tasks, and validating the blockchain. Below is an overview of the project and its usage.
+
+## Features
+
+- **Blockchain**: Implements a simple blockchain to securely store task data.
+- **Task Management**: Allows task creation and approval within user-defined groups.
+- **Reputation System**: Tracks reputation points for participants.
+- **Reward System**: Rewards users with points for creating and approving tasks.
+- **API Endpoints**: Provides RESTful APIs to interact with the application.
+
+## Installation
+
+### Prerequisites
+- Python 3.x
+- Flask
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. Install required dependencies:
+   ```bash
+   pip install flask
+   ```
+
+3. Run the application:
+   ```bash
+   python app.py
+   ```
+
+4. Access the application at `http://127.0.0.1:5000`.
+
+## API Endpoints
+
+### 1. **Get Blockchain**
+   - **URL**: `/chain`
+   - **Method**: `GET`
+   - **Description**: Retrieves the entire blockchain.
+
+### 2. **Get Groups**
+   - **URL**: `/groups`
+   - **Method**: `GET`
+   - **Description**: Retrieves all existing groups.
+
+### 3. **Get Reputation**
+   - **URL**: `/reputation`
+   - **Method**: `GET`
+   - **Description**: Retrieves participants' reputation scores.
+
+### 4. **Get Rewards**
+   - **URL**: `/rewards`
+   - **Method**: `GET`
+   - **Description**: Retrieves participants' reward points.
+
+### 5. **Create a Group**
+   - **URL**: `/create_group`
+   - **Method**: `POST`
+   - **Request Body**:
+     ```json
+     {
+       "group_name": "example_group"
+     }
+     ```
+   - **Description**: Creates a new group.
+
+### 6. **Enroll in a Group**
+   - **URL**: `/enroll_in_group`
+   - **Method**: `POST`
+   - **Request Body**:
+     ```json
+     {
+       "group_name": "example_group",
+       "participant": "user1"
+     }
+     ```
+   - **Description**: Enrolls a participant in a group.
+
+### 7. **Create a Task**
+   - **URL**: `/create_task`
+   - **Method**: `POST`
+   - **Request Body**:
+     ```json
+     {
+       "group_name": "example_group",
+       "id": 1,
+       "description": "Task description",
+       "creator": "user1"
+     }
+     ```
+   - **Description**: Creates a new task in the group.
+
+### 8. **Approve a Task**
+   - **URL**: `/approve_task`
+   - **Method**: `POST`
+   - **Request Body**:
+     ```json
+     {
+       "group_name": "example_group",
+       "task_id": 1,
+       "participant": "user2"
+     }
+     ```
+   - **Description**: Approves a task by a participant.
+
+### 9. **Validate Blockchain**
+   - **URL**: `/validate_chain`
+   - **Method**: `GET`
+   - **Description**: Validates the integrity of the blockchain.
+
+## Project Structure
+
+- **`app.py`**: The main application file.
+- **`Block`**: Represents a single block in the blockchain.
+- **`Blockchain`**: Manages the blockchain and group functionalities.
+
+## Future Improvements
+- Add user authentication.
+- Integrate a front-end interface.
+- Enhance the mining mechanism for better security.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+Feel free to contribute and submit pull requests for improvements!
+
