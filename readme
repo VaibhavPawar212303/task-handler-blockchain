@@ -1,4 +1,4 @@
-# Blockchain Application with Flask
+#Blockchain Application with Flask
 
 This project is a Flask-based blockchain application that includes functionalities for creating and managing groups, assigning tasks, approving tasks, and validating the blockchain. Below is an overview of the project and its usage.
 
