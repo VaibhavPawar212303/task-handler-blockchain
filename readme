@@ -1,14 +1,5 @@
 # Flask-Based Blockchain Application
 
-## Overview
-This project is a Flask-based blockchain application that implements basic blockchain features along with a task management system. The application allows for the creation of groups, enrollment of participants, task creation, task approval, and blockchain validation. Each task is recorded on the blockchain after meeting certain approval criteria, and users earn reputation points and rewards for their actions.
 
-## Features
-- **Blockchain Implementation**: Securely records tasks as blocks in the blockchain.
-- **Group Management**: Create groups and manage participants.
-- **Task Management**: Create and approve tasks within groups.
-- **Reputation System**: Tracks user reputation and enforces thresholds for task approval.
-- **Reward System**: Rewards users with coins/points for creating and approving tasks.
-- **Flask API**: Exposes endpoints for interacting with the blockchain and task system.
 
 
